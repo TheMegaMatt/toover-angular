@@ -6,6 +6,7 @@
     "login": {
       "email": "Email address",
       "password": "Password",
+      "recover-password": "Forgot your password?",
       "sign-in": "Sign In",
       "title": "Login to Toover",
       "errors": {
@@ -13,31 +14,6 @@
         "disabled": "Your account has been disabled.",
         "not-found": "Account not found."
       }
-    }
-  },
-  "items": {
-    "nav": "Items"
-  },
-  "employees": {
-    "nav": "Employees"
-  },
-  "places": {
-    "nav": "Places"
-  },
-  "types": {
-    "nav": "Types"
-  },
-  "dashboard": {
-    "nav": "Dashboard",
-    "home": {
-      "title": "Dashboard",
-      "nav": "Dashboard"
-    },
-    "about": {
-      "title": "About"
-    },
-    "settings": {
-      "title": "Settings"
     }
   },
   "form": {
