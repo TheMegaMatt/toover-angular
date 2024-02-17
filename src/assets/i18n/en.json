@@ -1,26 +1,5 @@
 {
   "app": {
     "name": "Toover"
-  },
-  "auth": {
-    "login": {
-      "email": "Email address",
-      "password": "Password",
-      "recover-password": "Forgot your password?",
-      "sign-in": "Sign In",
-      "title": "Login to Toover",
-      "errors": {
-        "invalid-email-or-password": "Invalid email or password.",
-        "disabled": "Your account has been disabled.",
-        "not-found": "Account not found."
-      }
-    }
-  },
-  "form": {
-    "errors": {
-      "required": "Field is required",
-      "min-length": "Field must be at least {{requiredLength}} char long. (currently {{actualLength}})",
-      "max-length": "Field must have a max of {{ requiredLength }} chars. (currently {{actualLength}})."
-    }
   }
 }
