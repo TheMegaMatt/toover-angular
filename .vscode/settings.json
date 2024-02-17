@@ -1,0 +1,18 @@
+{
+  "angular-schematics.schematicsDefaultOptions": {
+    "angular-*": {
+      "style": "scss",
+      "inlineStyle": true,
+      "skipStyle": true,
+      "externalTemplate": true,
+      "selectorPrefix": "oa"
+    },
+    "angular-component": {
+      "ngOnInit": true,
+      "skipDisplayBlock": true
+    },
+    "angular-page": {
+      "skipNgOnInit": false
+    }
+  }
+}
