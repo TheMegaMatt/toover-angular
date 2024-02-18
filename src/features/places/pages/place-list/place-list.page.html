@@ -1,0 +1,20 @@
+<oa-page-header [title]="'places.list.title' | translate" />
+<oa-page-content>
+    <ul role="list" class="mt-3 grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        @for (item of places(); track $index) {
+            <li [routerLink]="item.id.toString()"
+                class="flex shadow-sm rounded-md border border-gray-200 bg-white hover:bg-slate-200">
+                <div class="flex-1 flex flex-grow items-center justify-between rounded-md truncate">
+                    <div class="flex-1 px-4 py-2 text-sm truncate">
+                        <p class="text-gray-900 font-medium hover:text-gray-600">{{ item.name }}</p>
+                        <p class="text-gray-500">{{ item.itemsCount }} Assets  </p>
+                    </div>
+                </div>
+            </li>
+        } @empty {
+            <h2 class="text-gray-500 text-xs font-medium uppercase tracking-wide">
+                No Locations
+            </h2>
+        }
+    </ul>
+</oa-page-content>

@@ -11,18 +11,18 @@
                     <div class="hidden lg:block lg:ml-10">
                         <div class="flex space-x-4">
                             <!-- Current: "bg-indigo-700 text-white", Default: "text-white hover:bg-indigo-500 hover:bg-opacity-75" -->
-                            <a href="/app" class="bg-indigo-700 text-white rounded-md py-2 px-3 text-sm font-medium"
+                            <a href="/" class="bg-indigo-700 text-white rounded-md py-2 px-3 text-sm font-medium"
                                 aria-current="page"> {{ 'dashboard.nav' | translate }} </a>
-                            <a href="/app/items"
+                            <a href="/items"
                                 class="text-white hover:bg-indigo-500 hover:bg-opacity-75 rounded-md py-2 px-3 text-sm font-medium">
                                 {{ 'items.nav' | translate }} </a>
-                            <a href="/app/employees"
+                            <a href="/employees"
                                 class="text-white hover:bg-indigo-500 hover:bg-opacity-75 rounded-md py-2 px-3 text-sm font-medium">
                                 {{ 'employees.nav' | translate }} </a>
-                            <a href="/app/types"
+                            <a href="/types"
                                 class="text-white hover:bg-indigo-500 hover:bg-opacity-75 rounded-md py-2 px-3 text-sm font-medium">
                                 {{ 'types.nav' | translate }} </a>
-                            <a href="/app/places"
+                            <a routerLink="places"
                                 class="text-white hover:bg-indigo-500 hover:bg-opacity-75 rounded-md py-2 px-3 text-sm font-medium">
                                 {{ 'places.nav' | translate }} </a>
                         </div>
