@@ -22,7 +22,10 @@
     "nav": "Employees"
   },
   "places": {
-    "nav": "Places"
+    "nav": "Places",
+    "list": {
+      "title": "Places"
+    }
   },
   "types": {
     "nav": "Types"
