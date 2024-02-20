@@ -52,7 +52,8 @@
 			"available": "Available"
 		},
 		"list": {
-			"empty": "No Items"
+			"empty": "No Items",
+			"empty (2)": "No Items"
 		}
 	},
 	"places": {
@@ -84,7 +85,7 @@
 		},
 		"form": {
 			"items": {
-				"label": "Devices of this place"
+				"label": "Items"
 			},
 			"items-count": {
 				"count": "{{count}} devices",
@@ -113,6 +114,15 @@
 			"title": "New type"
 		},
 		"detail": {
+			"actions": {
+				"delete": {
+					"body": "Are you sure you want to delete the type?",
+					"cancel": "Cancel",
+					"confirm": "Delete",
+					"title": "Delete Type"
+				},
+				"edit": "Edit"
+			},
 			"subtitle": "Details for {{name}}",
 			"title": "Type Detail"
 		},
@@ -125,7 +135,7 @@
 				"label": "Icon"
 			},
 			"items": {
-				"label": "Devices of this type"
+				"label": "Items"
 			},
 			"items-count": {
 				"count": "{{count}} devices",

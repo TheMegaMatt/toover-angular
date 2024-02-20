@@ -52,7 +52,8 @@
 			"available": "Disponibile"
 		},
 		"list": {
-			"empty": "Nessun dispositivo"
+			"empty": "Nessun dispositivo",
+			"empty (2)": "Nessun dispositivo"
 		}
 	},
 	"places": {
@@ -84,7 +85,7 @@
 		},
 		"form": {
 			"items": {
-				"label": "Dispositivi di questo luogo"
+				"label": "Dispositivi"
 			},
 			"items-count": {
 				"count": "{{count}} dispositivi",
@@ -113,6 +114,15 @@
 			"title": "Nuovo tipo"
 		},
 		"detail": {
+			"actions": {
+				"delete": {
+					"body": "Sei sicuro di voler eliminare il tipo?",
+					"cancel": "Annulla",
+					"confirm": "Elimina",
+					"title": "Elimina Tipo"
+				},
+				"edit": "Modifica"
+			},
 			"subtitle": "Dettagli per {{name}}",
 			"title": "Dettaglio tipo"
 		},
@@ -125,7 +135,7 @@
 				"label": "Icona"
 			},
 			"items": {
-				"label": "Dispositivi di questa tipologia"
+				"label": "Dispositivi"
 			},
 			"items-count": {
 				"count": "{{count}} dispositivi",
