@@ -1,5 +1,151 @@
 {
-  "app": {
-    "name": "Toover ITA"
-  }
+	"auth": {
+		"login": {
+			"forms": {
+				"actions": {
+					"sign-in": "Accedi"
+				},
+				"email": "Indirizzo email",
+				"password": "Password"
+			},
+			"title": "Accedi a Toover"
+		}
+	},
+	"employees": {
+		"create": {
+			"subtitle": "Crea un nuovo dipendente",
+			"title": "Nuovo dipendente"
+		},
+		"detail": {
+			"subtitle": "Dettagli per {{name}}",
+			"title": "Dettaglio dipendente"
+		},
+		"edit": {
+			"subtitle": "Modifica per {{name}}",
+			"title": "Modifica dipendente"
+		},
+		"list": {
+			"all": "Tutti i dipendenti",
+			"subtitle": "Ricerca per \"{{search}}\"...",
+			"title": "Dipendenti"
+		}
+	},
+	"general": {
+		"form": {
+			"errors": {
+				"max-length": "Il campo non deve essere piu lungo di {{}} caratteri",
+				"min-length": "Il campo deve essere lungo almeno {{}} caratteri",
+				"required": "Il campo è obbligatorio",
+				"valid-url": "Il campo deve contenere un url valido"
+			},
+			"labels": {
+				"cancel": "Annulla",
+				"save": "Salva"
+			}
+		}
+	},
+	"items": {
+		"create": {
+			"title": "Crea un nuovo dispositivo"
+		},
+		"general": {
+			"available": "Disponibile"
+		},
+		"list": {
+			"empty": "Nessun dispositivo"
+		}
+	},
+	"places": {
+		"create": {
+			"subtitle": "Crea un nuovo luogo",
+			"title": "Crea luogo"
+		},
+		"detail": {
+			"actions": {
+				"delete": {
+					"body": "Sei sicuro di voler eliminare il luogo?",
+					"cancel": "Annulla",
+					"confirm": "Elimina",
+					"title": "Elimina luogo"
+				}
+			}
+		},
+		"details": {
+			"actions": {
+				"delete": "Elimina",
+				"edit": "Modifica"
+			},
+			"subtitle": "Dettagli per {{name}}",
+			"title": "Dettaglio luogo"
+		},
+		"edit": {
+			"subtitle": "Modifica per {{name}}",
+			"title": "Modifica luogo"
+		},
+		"form": {
+			"items": {
+				"label": "Dispositivi di questo luogo"
+			},
+			"items-count": {
+				"count": "{{count}} dispositivi",
+				"label": "Dispositivi in questo luogo"
+			},
+			"name": {
+				"label": "Nome luogo"
+			}
+		},
+		"list": {
+			"actions": {
+				"create": "Crea nuovo"
+			},
+			"all": "Tutti i luoghi",
+			"empty": "Nessun luogo disponibile",
+			"empty-filtered": "Nessun risultato per \"{{filter}}\"",
+			"loading": "Caricamento luoghi in corso...",
+			"subtitle": "Ricerca per \"{{name}}\"...",
+			"title": "Luoghi"
+		},
+		"nav": "Luoghi"
+	},
+	"types": {
+		"create": {
+			"subtitle": "Crea un nuovo tipo",
+			"title": "Nuovo tipo"
+		},
+		"detail": {
+			"subtitle": "Dettagli per {{name}}",
+			"title": "Dettaglio tipo"
+		},
+		"edit": {
+			"subtitle": "Modifica per {{name}}",
+			"title": "Modifica tipo"
+		},
+		"form": {
+			"icon-url": {
+				"label": "Icona"
+			},
+			"items": {
+				"label": "Dispositivi di questa tipologia"
+			},
+			"items-count": {
+				"count": "{{count}} dispositivi",
+				"label": "Dispositivi di questa tipologia"
+			},
+			"name": {
+				"label": "Nome tipo"
+			}
+		},
+		"list": {
+			"actions": {
+				"create": "Crea nuovo"
+			},
+			"all": "Tutti i tipi",
+			"empty": "Nessun tipo disponibile",
+			"empty-filtered": "Nessun risultato per \"{{filter}}\"",
+			"loading": "Caricamento tipi in corso...",
+			"subtitle": "Ricerca per \"{{name}}\"...",
+			"title": "Tipi dispositivo"
+		},
+		"nav": "Tipi"
+	}
 }

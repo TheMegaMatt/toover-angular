@@ -1,53 +1,151 @@
 {
-  "app": {
-    "name": "Toover"
-  },
-  "auth": {
-    "login": {
-      "email": "Email address",
-      "password": "Password",
-      "sign-in": "Sign In",
-      "title": "Login to Toover",
-      "errors": {
-        "invalid-email-or-password": "Invalid email or password.",
-        "disabled": "Your account has been disabled.",
-        "not-found": "Account not found."
-      }
-    }
-  },
-  "items": {
-    "nav": "Items"
-  },
-  "employees": {
-    "nav": "Employees"
-  },
-  "places": {
-    "nav": "Places",
-    "list": {
-      "title": "Places"
-    }
-  },
-  "types": {
-    "nav": "Types"
-  },
-  "dashboard": {
-    "nav": "Dashboard",
-    "home": {
-      "title": "Dashboard",
-      "nav": "Dashboard"
-    },
-    "about": {
-      "title": "About"
-    },
-    "settings": {
-      "title": "Settings"
-    }
-  },
-  "form": {
-    "errors": {
-      "required": "Field is required",
-      "min-length": "Field must be at least {{requiredLength}} char long. (currently {{actualLength}})",
-      "max-length": "Field must have a max of {{ requiredLength }} chars. (currently {{actualLength}})."
-    }
-  }
+	"auth": {
+		"login": {
+			"forms": {
+				"actions": {
+					"sign-in": "Log-in"
+				},
+				"email": "Email address",
+				"password": "Password"
+			},
+			"title": "Login to Toover"
+		}
+	},
+	"employees": {
+		"create": {
+			"subtitle": "Create a new employee",
+			"title": "New employee"
+		},
+		"detail": {
+			"subtitle": "Details for {{name}}",
+			"title": "Employee Detail"
+		},
+		"edit": {
+			"subtitle": "Edit for {{name}}",
+			"title": "Edit employee"
+		},
+		"list": {
+			"all": "All employees",
+			"subtitle": "Search for \"{{search}}\"...",
+			"title": "Employees"
+		}
+	},
+	"general": {
+		"form": {
+			"errors": {
+				"max-length": "The field must not be longer than {{}} characters",
+				"min-length": "The field must be at least {{}} characters long",
+				"required": "Field is required",
+				"valid-url": "The field must contain a valid URL"
+			},
+			"labels": {
+				"cancel": "Cancel",
+				"save": "Save"
+			}
+		}
+	},
+	"items": {
+		"create": {
+			"title": "Create a new Item"
+		},
+		"general": {
+			"available": "Available"
+		},
+		"list": {
+			"empty": "No Items"
+		}
+	},
+	"places": {
+		"create": {
+			"subtitle": "Create a new location",
+			"title": "Create location"
+		},
+		"detail": {
+			"actions": {
+				"delete": {
+					"body": "Are you sure you want to delete the location?",
+					"cancel": "Cancel",
+					"confirm": "Delete",
+					"title": "Delete location"
+				}
+			}
+		},
+		"details": {
+			"actions": {
+				"delete": "Delete",
+				"edit": "Edit"
+			},
+			"subtitle": "Details for {{name}}",
+			"title": "Location Detail"
+		},
+		"edit": {
+			"subtitle": "Edit for {{name}}",
+			"title": "Edit Location"
+		},
+		"form": {
+			"items": {
+				"label": "Devices of this place"
+			},
+			"items-count": {
+				"count": "{{count}} devices",
+				"label": "Devices in this location"
+			},
+			"name": {
+				"label": "Location name"
+			}
+		},
+		"list": {
+			"actions": {
+				"create": "Create new"
+			},
+			"all": "All the places",
+			"empty": "No Location Available",
+			"empty-filtered": "No results for \"{{filter}}\"",
+			"loading": "Loading locations...",
+			"subtitle": "Search for \"{{name}}\"...",
+			"title": "Locations"
+		},
+		"nav": "Locations"
+	},
+	"types": {
+		"create": {
+			"subtitle": "Create a new type",
+			"title": "New type"
+		},
+		"detail": {
+			"subtitle": "Details for {{name}}",
+			"title": "Type Detail"
+		},
+		"edit": {
+			"subtitle": "Edit for {{name}}",
+			"title": "Edit type"
+		},
+		"form": {
+			"icon-url": {
+				"label": "Icon"
+			},
+			"items": {
+				"label": "Devices of this type"
+			},
+			"items-count": {
+				"count": "{{count}} devices",
+				"label": "Devices of this type"
+			},
+			"name": {
+				"label": "Type Name"
+			}
+		},
+		"list": {
+			"actions": {
+				"create": "Create new"
+			},
+			"all": "All types",
+			"empty": "No type available",
+			"empty-filtered": "No results for \"{{filter}}\"",
+			"loading": "Loading types...",
+			"subtitle": "Search for \"{{name}}\"...",
+			"title": "Device Types"
+		},
+		"nav": "Types"
+	}
 }

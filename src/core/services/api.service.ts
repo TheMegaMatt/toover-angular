@@ -1,9 +1,9 @@
 import { HttpClient } from "@angular/common/http";
 import { inject } from "@angular/core";
 import { environment } from "@environment/environment";
-import { Observable, catchError, filter, throwError } from "rxjs";
+import { Observable, catchError, throwError } from "rxjs";
 
-export class BaseApiClient<
+export abstract class BaseApiClient<
   TListResponse,
   TDataResponse,
   TFilter,
@@ -18,9 +18,7 @@ export class BaseApiClient<
   }
 
   search(filters: TFilter): Observable<TListResponse> {
-    let url = filters
-      ? `${this.baseUrl}${createQueryString(filter)}`
-      : this.baseUrl;
+    let url = filters ? `${this.baseUrl}${createQueryString(filters)}` : this.baseUrl;
     return this.http
       .get<TListResponse>(url)
       .pipe(catchError((caught) => throwError(() => caught.error)));
@@ -51,12 +49,8 @@ export class BaseApiClient<
   }
 }
 
-function createQueryString(data: any) {
+function createQueryString(data: Record<string, any>) {
   const qs = new URLSearchParams();
-  if (typeof data === "string") {
-    qs.append("name", data);
-  }
-
   for (const key in data) {
     const filter = data[key];
     if (typeof filter == "number" || typeof filter == "boolean") {

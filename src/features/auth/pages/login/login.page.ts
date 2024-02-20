@@ -1,13 +1,13 @@
-import {ChangeDetectionStrategy, Component, inject, type OnInit, signal} from "@angular/core";
+import {Component, inject, type OnInit, signal} from "@angular/core";
 import {TranslateModule} from "@ngx-translate/core";
-import {LoginFormComponent} from "@/features/auth/components/login-form/login-form.component";
-import {AuthTitleComponent} from "@shared/layouts/auth-layout/components/auth-title.component";
-import {AuthContentComponent} from "@shared/layouts/auth-layout/components/auth-content.component";
-import {AuthService} from "@/features/auth/services/auth.service";
+import {LoginFormComponent} from "@/features/auth/components";
+import {AuthContentComponent, AuthTitleComponent} from "@shared/layouts";
+import {AuthService} from "@/features/auth/services";
 import {LoginCredentials} from "@/features/auth/models";
-import {getFirebaseErrorMessage} from "@shared/utils/firebase";
-import {ErrorDisplayComponent} from "@shared/components/error-display/error-display.component";
+import {getFirebaseErrorMessage} from "@shared/utils";
+import {ErrorDisplayComponent} from "@shared/components";
 import {NgIf} from "@angular/common";
+import {Router} from "@angular/router";
 
 @Component({
     standalone: true,
@@ -18,6 +18,7 @@ import {NgIf} from "@angular/common";
 export class LoginPage implements OnInit {
 
     auth = inject(AuthService);
+    router = inject(Router);
     error = signal<string | null>(null)
 
     ngOnInit(): void {
@@ -25,8 +26,8 @@ export class LoginPage implements OnInit {
 
     login(credentials: LoginCredentials) {
         this.auth.login(credentials).subscribe({
-            next: ({user}) => {
-                alert(`Logged in as ${user.email}`)
+            next: async ({user}) => {
+                await this.router.navigate(["/"]);
             },
             error: (e) => this.error.set(getFirebaseErrorMessage(e))
         })

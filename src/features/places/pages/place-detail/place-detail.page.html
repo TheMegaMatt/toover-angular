@@ -1,0 +1,30 @@
+<oa-page-header [title]="'places.details.title' | translate" />
+<oa-page-content>
+    <oa-section-header [title]="'places.details.subtitle' | translate:{name: name()}" [actions]="actions" />
+    <oa-error-display [error]="error()" *ngIf="error()" (dismiss)="error.set(null)" />
+    <div>
+        <div class="mt-6 border-gray-100">
+            <dl class="divide-y divide-gray-100">
+                <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">{{'places.form.name.label' | translate}}</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ place()?.name }}</dd>
+                </div>
+                <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'places.form.items-count.label' | translate }}</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ 'places.form.items-count.count' | translate:{count:place()?.itemsCount || 0} }}</dd>
+                </div>
+                <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'places.form.items.label' | translate }}</dt>
+                    <dd class="mt-2 text-sm text-gray-900 sm:col-span-3 sm:mt-0">
+                        <oa-related-items-list [items]="items()" showPlace="false" [createMessage]="'items.create.title' | translate" [emptyMessage]="'items.list.empty' | translate" />
+                    </dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+    <oa-confirm-modal [open]="open()" [title]="'places.detail.actions.delete.title' | translate"
+                      [body]="'places.detail.actions.delete.body' | translate"
+                      [cancelLabel]="'places.detail.actions.delete.cancel' | translate"
+                      [confirmLabel]="'places.detail.actions.delete.confirm' | translate"
+                      (confirm)="onDeleteConfirm_Click()" (cancel)="onCancel()" />
+</oa-page-content>
