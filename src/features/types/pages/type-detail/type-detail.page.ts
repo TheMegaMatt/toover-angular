@@ -12,6 +12,9 @@ import {DeviceType} from "@/features/types/models/entity";
 import {ItemsApiService} from "@/features/items/services/items-api.service";
 import {RelatedItemsListComponent} from "@/features/items/components";
 import {Item} from "@/features/items/models/entity";
+import {ConfirmModalComponent} from "@shared/components/modals/confirm-modal/confirm-modal.component";
+import {Location, NgIf} from "@angular/common";
+import {ErrorDisplayComponent} from "@shared/components";
 
 @Component({
     standalone: true,
@@ -20,7 +23,10 @@ import {Item} from "@/features/items/models/entity";
         PageHeaderComponent,
         SectionHeaderComponent,
         TranslateModule,
-        RelatedItemsListComponent
+        RelatedItemsListComponent,
+        ConfirmModalComponent,
+        ErrorDisplayComponent,
+        NgIf
     ],
     templateUrl: './type-detail.page.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -31,14 +37,17 @@ export class TypeDetailPage implements OnInit {
     route = inject(ActivatedRoute);
     api = inject(TypesApiService);
     itemsApi = inject(ItemsApiService);
+    location = inject(Location)
+    open = signal<boolean>(false);
+    error = signal<any>(null)
 
     type = signal<DeviceType | null>(null)
     name = computed(() => this.type()?.name ?? "")
     items = signal<Item[]>([])
 
     actions: HeaderAction[] = [
-        {type: 'link', label: 'types.details.actions.edit', route: ['edit']},
-        {type: 'button', label: 'types.details.actions.delete', action: () => this.onDelete_Click(), variant: 'danger'},
+        {type: 'link', label: 'types.detail.actions.edit', route: ['edit']},
+        {type: 'button', label: 'types.detail.actions.delete.confirm', action: () => this.onDelete_Click(), variant: 'danger'},
     ]
 
     ngOnInit(): void {
@@ -51,9 +60,23 @@ export class TypeDetailPage implements OnInit {
             tap(x => this.items.set(x.items))
         ).subscribe()
     }
-
-    private onDelete_Click() {
-
+    onDelete_Click() {
+        this.open.set(true)
     }
 
+    onDeleteConfirm_Click() {
+        this.open.set(false);
+        this.api.delete(this.type()?.id!).subscribe({
+            next: () => {
+                this.location.back();
+            },
+            error: error => {
+                this.error.set(error);
+            }
+        })
+    }
+
+    onCancel() {
+        this.open.set(false);
+    }
 }

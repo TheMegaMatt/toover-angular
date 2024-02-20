@@ -3,6 +3,7 @@ import {Item} from "@/features/items/models/entity";
 import {NgIf} from "@angular/common";
 import {TranslateModule} from "@ngx-translate/core";
 import {RouterLink} from "@angular/router";
+import {EmptyListComponent} from "@shared/components/empty-list/empty-list.component";
 
 @Component({
   selector: 'oa-related-items-list',
@@ -10,7 +11,8 @@ import {RouterLink} from "@angular/router";
   imports: [
     NgIf,
     TranslateModule,
-    RouterLink
+    RouterLink,
+    EmptyListComponent
   ],
   templateUrl: './related-items-list.component.html',
   styles: ``
@@ -23,6 +25,6 @@ export class RelatedItemsListComponent {
   showEdit = input(true, { transform: booleanAttribute});
   showView = input(true, { transform: booleanAttribute});
   showCreate = input(true);
-  emptyMessage = input<string>("VBBB");
-  createMessage = input<string>("CCCC");
+  emptyMessage = input<string>("");
+  createMessage = input<string>("");
 }
