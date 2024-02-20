@@ -8,6 +8,6 @@ export interface ListResponse<T> {
     totalCount: number;
 }
 
-export interface ItemResponse<T> {
+export interface DataResponse<T> {
     data: T;
 }

@@ -1,9 +1,8 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, inject, type OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, inject, Output} from '@angular/core';
 import {FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
 import {TranslateModule} from "@ngx-translate/core";
 import {LoginCredentials} from "@/features/auth/models";
-import {FormErrorDisplayComponent} from "@shared/components/form-error-display/form-error-display.component";
-import {JsonPipe} from "@angular/common";
+import {FormErrorDisplayComponent} from "@shared/components";
 
 @Component({
     selector: 'oa-login-form',
