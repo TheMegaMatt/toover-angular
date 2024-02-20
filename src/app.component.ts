@@ -2,7 +2,6 @@ import {Component, inject} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import {TranslateModule, TranslateService} from "@ngx-translate/core";
-import {BaseComponent} from "./core/components/base.component";
 
 @Component({
   selector: 'app-root',
@@ -11,11 +10,10 @@ import {BaseComponent} from "./core/components/base.component";
   template: `<router-outlet></router-outlet>`,
   styles: [],
 })
-export class AppComponent extends BaseComponent {
-
+export class AppComponent {
+  private translateService = inject(TranslateService);
+   
   constructor() {
-    super();
-    this.translateService.setDefaultLang('en');
     this.translateService.use('it')
   }
 }

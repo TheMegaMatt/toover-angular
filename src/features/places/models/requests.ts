@@ -12,4 +12,4 @@ export interface AssignToPlaceRequest {
     itemId: number;
 }
 
-export type PlaceListFilter = string;
+export type PlaceListFilter = { name: string };

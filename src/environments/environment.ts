@@ -1,5 +1,5 @@
 export const environment = {
-    baseUrl: "https://localhost:7189/",
+    baseUrl: "https://localhost:7189",
     env: 'LOCAL',
     firebase: {
         projectId: 'toover-dev',

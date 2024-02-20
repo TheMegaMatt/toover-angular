@@ -1,0 +1,6 @@
+<oa-page-header [title]="'places.edit.title' | translate" />
+<oa-page-content>
+    <oa-section-header [title]="'places.edit.subtitle' | translate: {name: name()}" />
+    <oa-error-display [error]="error()" *ngIf="error()" />
+    <oa-place-form [form]="form" (submitted)="onSubmit()" (cancel)="onCancel()" />
+</oa-page-content>
