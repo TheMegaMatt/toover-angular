@@ -28,7 +28,8 @@
 			"all": "Tutti i dipendenti",
 			"subtitle": "Ricerca per \"{{search}}\"...",
 			"title": "Dipendenti"
-		}
+		},
+		"nav": "Dipendenti"
 	},
 	"general": {
 		"form": {
@@ -54,7 +55,8 @@
 		"list": {
 			"empty": "Nessun dispositivo",
 			"empty (2)": "Nessun dispositivo"
-		}
+		},
+		"nav": "Dispositivi"
 	},
 	"places": {
 		"create": {

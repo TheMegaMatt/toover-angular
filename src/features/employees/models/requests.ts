@@ -17,4 +17,4 @@ export interface AssignToEmployeeRequest {
     itemId: number;
 }
 
-export type EmployeeListFilter = string;
+export type EmployeeListFilter = { name: string };

@@ -15,5 +15,6 @@ export const routes: Routes = [
   { path: "employees", component: AppShell, children: [...employee] },
   { path: "types", component: AppShell, children: [...types] },
   { path: "items", component: AppShell, children: [...item] },
-  { path: "auth", component: AuthShell, children: [...auth] }
+  { path: "auth", component: AuthShell, children: [...auth] },
+  { path: '**', redirectTo: 'items', pathMatch: 'full'}
 ];
