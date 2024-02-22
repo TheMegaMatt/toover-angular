@@ -12,7 +12,7 @@
                     <div class="hidden lg:block lg:ml-10">
                         <div class="flex space-x-4">
                             @for (link of menu; track $index) {
-                                <a [routerLink]="link.route" routerLinkActive="bg-cyan-700 text-white"
+                                <a [routerLink]="link.route" routerLinkActive="bg-cyan-700"
                                    [routerLinkActiveOptions]="{exact:true}"
                                    class="text-white hover:bg-cyan-500 hover:bg-opacity-75 rounded-md py-2 px-3 text-sm font-medium">
                                     {{ link.label | translate }} </a>

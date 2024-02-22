@@ -1,7 +1,7 @@
 import {Component, inject, signal} from '@angular/core';
 import {ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR} from "@angular/forms";
 import {IconService} from "@/features/types/services/icon.service";
-import {Icon} from "@/features/types/models/entity";
+import {Icon} from "@/features/types/models";
 import {NgClass, NgIf} from "@angular/common";
 import {animate, style, transition, trigger} from "@angular/animations";
 import {OnChangeFn, OnTouchFn} from "@shared/utils";
@@ -14,8 +14,7 @@ import {OnChangeFn, OnTouchFn} from "@shared/utils";
         NgClass,
         NgIf,
     ],
-
-    providers: [{ provide: NG_VALUE_ACCESSOR, useExisting: IconPickerComponent, multi: true }],
+    providers: [{provide: NG_VALUE_ACCESSOR, useExisting: IconPickerComponent, multi: true}],
     animations: [
         trigger('opacityLeave', [
             transition(':leave', [
