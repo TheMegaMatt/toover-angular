@@ -43,10 +43,10 @@ export class PlaceDetailPage implements OnInit {
     error = signal<any>(null)
 
     actions: HeaderAction[] = [
-        {type: 'link', label: 'places.details.actions.edit', route: ['edit']},
+        {type: 'link', label: 'places.detail.actions.edit.label', route: ['edit']},
         {
             type: 'button',
-            label: 'places.details.actions.delete',
+            label: 'places.detail.actions.delete.label',
             action: () => this.onDelete_Click(),
             variant: 'danger'
         },

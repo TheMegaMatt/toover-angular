@@ -6,10 +6,6 @@ export const routes: Routes = [
         loadComponent: () => import("./about/about.page").then((m) => m.AboutPage),
     },
     {
-        path: "settings",
-        loadComponent: () => import("./settings/settings.page").then((m) => m.SettingsPage),
-    },
-    {
         path: '', pathMatch: 'full', redirectTo: '/items'
     }
     // {

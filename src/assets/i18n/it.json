@@ -3,145 +3,87 @@
 		"login": {
 			"forms": {
 				"actions": {
-					"sign-in": "Accedi"
+					"sign-in": {
+						"label": "Accedi"
+					}
 				},
-				"email": "Indirizzo email",
-				"password": "Password"
+				"email": {
+					"label": "Indirizzo Email"
+				},
+				"password": {
+					"label": "Password"
+				}
 			},
 			"title": "Accedi a Toover"
 		}
 	},
-	"employees": {
-		"create": {
-			"subtitle": "Crea un nuovo dipendente",
-			"title": "Nuovo dipendente"
+	"dashboard": {
+		"about": {
+			"nav": "About\n",
+			"title": "About Toover"
 		},
-		"detail": {
-			"subtitle": "Dettagli per {{name}}",
-			"title": "Dettaglio dipendente"
-		},
-		"edit": {
-			"subtitle": "Modifica per {{name}}",
-			"title": "Modifica dipendente"
-		},
-		"list": {
-			"all": "Tutti i dipendenti",
-			"subtitle": "Ricerca per \"{{search}}\"...",
-			"title": "Dipendenti"
-		},
-		"nav": "Dipendenti"
+		"settings": {
+			"nav": "Impostazioni",
+			"title": "Impostazoni"
+		}
 	},
 	"general": {
 		"form": {
 			"errors": {
-				"max-length": "Il campo non deve essere piu lungo di {{}} caratteri",
-				"min-length": "Il campo deve essere lungo almeno {{}} caratteri",
-				"required": "Il campo è obbligatorio",
-				"valid-url": "Il campo deve contenere un url valido"
-			},
-			"labels": {
-				"cancel": "Annulla",
-				"save": "Salva"
+				"max-length": "Il campo deve avere al massimo {{requiredLength}} caratteri.",
+				"min-length": "Il campo deve avere almeno {{requiredLength}} caratteri.",
+				"required": "Il campo è obbligatorio"
 			}
 		}
 	},
 	"items": {
-		"create": {
-			"title": "Crea un nuovo dispositivo"
-		},
 		"general": {
 			"available": "Disponibile"
-		},
-		"list": {
-			"empty": "Nessun dispositivo",
-			"empty (2)": "Nessun dispositivo"
-		},
-		"nav": "Dispositivi"
+		}
 	},
 	"places": {
 		"create": {
-			"subtitle": "Crea un nuovo luogo",
+			"subtitle": "Crea un nuovo luogo nel sistema",
 			"title": "Crea luogo"
 		},
 		"detail": {
 			"actions": {
 				"delete": {
-					"body": "Sei sicuro di voler eliminare il luogo?",
+					"body": "Sei sicuro di voler eliminare il luogo <i>{{name}}</i>?",
 					"cancel": "Annulla",
 					"confirm": "Elimina",
+					"label": "Elimina",
 					"title": "Elimina luogo"
-				}
-			}
-		},
-		"details": {
-			"actions": {
-				"delete": "Elimina",
-				"edit": "Modifica"
-			},
-			"subtitle": "Dettagli per {{name}}",
-			"title": "Dettaglio luogo"
-		},
-		"edit": {
-			"subtitle": "Modifica per {{name}}",
-			"title": "Modifica luogo"
-		},
-		"form": {
-			"items": {
-				"label": "Dispositivi"
-			},
-			"items-count": {
-				"count": "{{count}} dispositivi",
-				"label": "Dispositivi in questo luogo"
-			},
-			"name": {
-				"label": "Nome luogo"
-			}
-		},
-		"list": {
-			"actions": {
-				"create": "Crea nuovo"
-			},
-			"all": "Tutti i luoghi",
-			"empty": "Nessun luogo disponibile",
-			"empty-filtered": "Nessun risultato per \"{{filter}}\"",
-			"loading": "Caricamento luoghi in corso...",
-			"subtitle": "Ricerca per \"{{name}}\"...",
-			"title": "Luoghi"
-		},
-		"nav": "Luoghi"
-	},
-	"types": {
-		"create": {
-			"subtitle": "Crea un nuovo tipo",
-			"title": "Nuovo tipo"
-		},
-		"detail": {
-			"actions": {
-				"delete": {
-					"body": "Sei sicuro di voler eliminare il tipo?",
-					"cancel": "Annulla",
-					"confirm": "Elimina",
-					"title": "Elimina Tipo"
 				},
-				"edit": "Modifica"
+				"edit": {
+					"label": "Modifica"
+				},
+				"empty": {
+					"create": {
+						"message": "Nessun dispositivo per {{name}}",
+						"title": "Crea nuovo dipositivo"
+					}
+				}
 			},
-			"subtitle": "Dettagli per {{name}}",
-			"title": "Dettaglio tipo"
+			"item": {
+				"items": "Dispositivi in questo luogo ({{count}})",
+				"name": "Nome Luogo"
+			},
+			"subtitle": "Dettaglio per {{name}}",
+			"title": "Dettaglio Luogo"
 		},
 		"edit": {
 			"subtitle": "Modifica per {{name}}",
 			"title": "Modifica tipo"
 		},
 		"form": {
-			"icon-url": {
-				"label": "Icona"
-			},
-			"items": {
-				"label": "Dispositivi"
-			},
-			"items-count": {
-				"count": "{{count}} dispositivi",
-				"label": "Dispositivi di questa tipologia"
+			"actions": {
+				"cancel": {
+					"label": "Annulla"
+				},
+				"save": {
+					"label": "Salva"
+				}
 			},
 			"name": {
 				"label": "Nome tipo"
@@ -149,15 +91,94 @@
 		},
 		"list": {
 			"actions": {
-				"create": "Crea nuovo"
+				"create": {
+					"label": "Crea luogo"
+				}
 			},
-			"all": "Tutti i tipi",
-			"empty": "Nessun tipo disponibile",
-			"empty-filtered": "Nessun risultato per \"{{filter}}\"",
-			"loading": "Caricamento tipi in corso...",
-			"subtitle": "Ricerca per \"{{name}}\"...",
-			"title": "Tipi dispositivo"
+			"empty": {
+				"filtered": "Nessuna luogo per \"{{search}}\"",
+				"no-filter": "Nessun dispositivo"
+			},
+			"item": {
+				"count": "{{count}} dispositivi",
+				"no-count": "Nessun dispositivo"
+			},
+			"loading": "Caricamento luoghi in corso...",
+			"subtitle": {
+				"filtered": "Ricerca luoghi per \"{{search}}\"...",
+				"not-filtered": "Tutti i luoghi"
+			},
+			"title": "Luoghi"
 		},
-		"nav": "Tipi"
+		"nav": "Luoghi"
+	},
+	"types": {
+		"create": {
+			"subtitle": "Crea una nuova tipologia di dispositivo nel sistema",
+			"title": "Crea tipologia dispositivo"
+		},
+		"detail": {
+			"actions": {
+				"delete": {
+					"body": "Sei sicuro di voler eliminare il tipo <i>{{name}}</i>?",
+					"cancel": "Annulla",
+					"confirm": "Elimina",
+					"label": "Elimina",
+					"title": "Elimina Tipo"
+				},
+				"edit": {
+					"label": "Modifica"
+				}
+			},
+			"item": {
+				"icon-url": "Icona",
+				"items": "Dispositivi di questa tipologia ({{count}})",
+				"name": "Nome tipo"
+			},
+			"subtitle": "Dettaglio per {{name}}",
+			"title": "Dettaglio Tipo"
+		},
+		"edit": {
+			"subtitle": "Modifica per {{name}}",
+			"title": "Modifica tipo"
+		},
+		"form": {
+			"actions": {
+				"cancel": {
+					"label": "Annulla"
+				},
+				"save": {
+					"label": "Salva"
+				}
+			},
+			"icon-url": {
+				"label": "Icona"
+			},
+			"name": {
+				"label": "Nome tipo"
+			}
+		},
+		"list": {
+			"actions": {
+				"create": {
+					"label": "Crea dispositivo"
+				}
+			},
+			"empty": {
+				"filtered": "Nessuna tipologia dispositivo per \"{{search}}\"",
+				"no-filter": "Nessun dispositivo"
+			},
+			"item": {
+				"count": "{{count}} dispositivi",
+				"no-count": "Nessun dispositivo"
+			},
+			"loading": "Caricamento tipologie dispositivi in corso...",
+			"subtitle": {
+				"filtered": "Ricerca tipologie dispositivo per \"{{search}}\"...",
+				"not-filtered": "Tutte le tipologie dispositivo"
+			},
+			"title": "Tipologie Dispositivo"
+		},
+		"nav": "Tipologie Dispositivo"
 	}
 }

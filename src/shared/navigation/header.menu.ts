@@ -6,4 +6,5 @@ export const HeaderMenu: MenuItem[] = [
     { label: 'places.nav', route: ["/", 'places'] },
     { label: 'employees.nav', route: ["/", 'employees'] },
     { label: 'types.nav', route: ["/", 'types'] },
+    { label: 'dashboard.about.nav', route: ["/", 'about'] },
 ]

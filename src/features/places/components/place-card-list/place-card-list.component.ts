@@ -2,13 +2,15 @@ import {Component, input} from '@angular/core';
 import {RouterLink} from "@angular/router";
 import {Place} from "@/features/places/models/entity";
 import {TranslateModule} from "@ngx-translate/core";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'oa-place-card-list',
   standalone: true,
   imports: [
     RouterLink,
-    TranslateModule
+    TranslateModule,
+    NgIf
   ],
   templateUrl: './place-card-list.component.html',
 })
