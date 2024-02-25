@@ -4,8 +4,6 @@ import {PageHeaderComponent} from "@shared/layouts/app-layout/components/page-he
 import {HeaderAction, SectionHeaderComponent} from "@shared/components/section-header.component";
 import {TranslateModule} from "@ngx-translate/core";
 import {ActivatedRoute} from "@angular/router";
-import {PlacesApiService} from "@/features/places/services/places-api.service";
-import {Place} from "@/features/places/models/entity";
 import {map, switchMap, tap} from "rxjs";
 import {TypesApiService} from "@/features/types/services/types-api.service";
 import {DeviceType} from "@/features/types/models/entity";
@@ -46,8 +44,8 @@ export class TypeDetailPage implements OnInit {
     items = signal<Item[]>([])
 
     actions: HeaderAction[] = [
-        {type: 'link', label: 'types.detail.actions.edit', route: ['edit']},
-        {type: 'button', label: 'types.detail.actions.delete.confirm', action: () => this.onDelete_Click(), variant: 'danger'},
+        {type: 'link', label: 'types.detail.actions.edit.label', route: ['edit']},
+        {type: 'button', label: 'types.detail.actions.delete.label', action: () => this.onDelete_Click(), variant: 'danger'},
     ]
 
     ngOnInit(): void {

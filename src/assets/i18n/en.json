@@ -3,145 +3,87 @@
 		"login": {
 			"forms": {
 				"actions": {
-					"sign-in": "Log-in"
+					"sign-in": {
+						"label": "Log In"
+					}
 				},
-				"email": "Email address",
-				"password": "Password"
+				"email": {
+					"label": "Email address"
+				},
+				"password": {
+					"label": "Password"
+				}
 			},
-			"title": "Login to Toover"
+			"title": "Log in to Toover"
 		}
 	},
-	"employees": {
-		"create": {
-			"subtitle": "Create a new employee",
-			"title": "New employee"
+	"dashboard": {
+		"about": {
+			"nav": "About",
+			"title": "About Toover"
 		},
-		"detail": {
-			"subtitle": "Details for {{name}}",
-			"title": "Employee Detail"
-		},
-		"edit": {
-			"subtitle": "Edit for {{name}}",
-			"title": "Edit employee"
-		},
-		"list": {
-			"all": "All employees",
-			"subtitle": "Search for \"{{search}}\"...",
-			"title": "Employees"
-		},
-		"nav": "Employees"
+		"settings": {
+			"nav": "Settings",
+			"title": "Settings"
+		}
 	},
 	"general": {
 		"form": {
 			"errors": {
-				"max-length": "The field must not be longer than {{}} characters",
-				"min-length": "The field must be at least {{}} characters long",
-				"required": "Field is required",
-				"valid-url": "The field must contain a valid URL"
-			},
-			"labels": {
-				"cancel": "Cancel",
-				"save": "Save"
+				"max-length": "The field must have a maximum of {{requiredLength}} characters.",
+				"min-length": "The field must have at least {{requiredLength}} characters.",
+				"required": "The field is mandatory"
 			}
 		}
 	},
 	"items": {
-		"create": {
-			"title": "Create a new Item"
-		},
 		"general": {
 			"available": "Available"
-		},
-		"list": {
-			"empty": "No Items",
-			"empty (2)": "No Items"
-		},
-		"nav": "Items"
+		}
 	},
 	"places": {
 		"create": {
-			"subtitle": "Create a new location",
-			"title": "Create location"
+			"subtitle": "Create a new place in the system",
+			"title": "Create Place"
 		},
 		"detail": {
 			"actions": {
 				"delete": {
-					"body": "Are you sure you want to delete the location?",
+					"body": "Are you sure you want to delete the place <i>{{name}}</i>?",
 					"cancel": "Cancel",
 					"confirm": "Delete",
-					"title": "Delete location"
-				}
-			}
-		},
-		"details": {
-			"actions": {
-				"delete": "Delete",
-				"edit": "Edit"
-			},
-			"subtitle": "Details for {{name}}",
-			"title": "Location Detail"
-		},
-		"edit": {
-			"subtitle": "Edit for {{name}}",
-			"title": "Edit Location"
-		},
-		"form": {
-			"items": {
-				"label": "Items"
-			},
-			"items-count": {
-				"count": "{{count}} devices",
-				"label": "Devices in this location"
-			},
-			"name": {
-				"label": "Location name"
-			}
-		},
-		"list": {
-			"actions": {
-				"create": "Create new"
-			},
-			"all": "All the places",
-			"empty": "No Location Available",
-			"empty-filtered": "No results for \"{{filter}}\"",
-			"loading": "Loading locations...",
-			"subtitle": "Search for \"{{name}}\"...",
-			"title": "Locations"
-		},
-		"nav": "Locations"
-	},
-	"types": {
-		"create": {
-			"subtitle": "Create a new type",
-			"title": "New type"
-		},
-		"detail": {
-			"actions": {
-				"delete": {
-					"body": "Are you sure you want to delete the type?",
-					"cancel": "Cancel",
-					"confirm": "Delete",
-					"title": "Delete Type"
+					"label": "Delete",
+					"title": "Delete place"
 				},
-				"edit": "Edit"
+				"edit": {
+					"label": "Edit"
+				},
+				"empty": {
+					"create": {
+						"message": "No devices for {{name}}",
+						"title": "Create new device"
+					}
+				}
 			},
-			"subtitle": "Details for {{name}}",
-			"title": "Type Detail"
+			"item": {
+				"items": "Devices in this place ({{count}})",
+				"name": "Place name"
+			},
+			"subtitle": "Detail for {{name}}",
+			"title": "Place Detail"
 		},
 		"edit": {
-			"subtitle": "Edit for {{name}}",
+			"subtitle": "Edit {{name}}",
 			"title": "Edit type"
 		},
 		"form": {
-			"icon-url": {
-				"label": "Icon"
-			},
-			"items": {
-				"label": "Items"
-			},
-			"items-count": {
-				"count": "{{count}} devices",
-				"label": "Devices of this type"
+			"actions": {
+				"cancel": {
+					"label": "Cancel"
+				},
+				"save": {
+					"label": "Save"
+				}
 			},
 			"name": {
 				"label": "Type Name"
@@ -149,15 +91,94 @@
 		},
 		"list": {
 			"actions": {
-				"create": "Create new"
+				"create": {
+					"label": "Create Place"
+				}
 			},
-			"all": "All types",
-			"empty": "No type available",
-			"empty-filtered": "No results for \"{{filter}}\"",
-			"loading": "Loading types...",
-			"subtitle": "Search for \"{{name}}\"...",
-			"title": "Device Types"
+			"empty": {
+				"filtered": "No places for \"{{search}}\"",
+				"no-filter": "No Devices"
+			},
+			"item": {
+				"count": "{{count}} devices",
+				"no-count": "No Devices"
+			},
+			"loading": "Loading places...",
+			"subtitle": {
+				"filtered": "Search places for \"{{search}}\"...",
+				"not-filtered": "All the places"
+			},
+			"title": "Places"
 		},
-		"nav": "Types"
+		"nav": "Places"
+	},
+	"types": {
+		"create": {
+			"subtitle": "Create a new device type in the system",
+			"title": "Create Device Type"
+		},
+		"detail": {
+			"actions": {
+				"delete": {
+					"body": "Are you sure you want to delete the <i>{{name}}</i> type?",
+					"cancel": "Cancel",
+					"confirm": "Delete",
+					"label": "Delete",
+					"title": "Delete type"
+				},
+				"edit": {
+					"label": "Edit"
+				}
+			},
+			"item": {
+				"icon-url": "Icon",
+				"items": "",
+				"name": "Type Name"
+			},
+			"subtitle": "Detail for {{name}}",
+			"title": "Device type detail"
+		},
+		"edit": {
+			"subtitle": "Edit {{name}}",
+			"title": "Edit type"
+		},
+		"form": {
+			"actions": {
+				"cancel": {
+					"label": "Cancel"
+				},
+				"save": {
+					"label": "Save"
+				}
+			},
+			"icon-url": {
+				"label": "Icon"
+			},
+			"name": {
+				"label": "Type Name"
+			}
+		},
+		"list": {
+			"actions": {
+				"create": {
+					"label": "Create device"
+				}
+			},
+			"empty": {
+				"filtered": "No device type for \"{{search}}\"",
+				"no-filter": "No Devices"
+			},
+			"item": {
+				"count": "{{count}} devices",
+				"no-count": "No Devices"
+			},
+			"loading": "Loading device types...",
+			"subtitle": {
+				"filtered": "Search device types for \"{{search}}\"...",
+				"not-filtered": "All Device Types"
+			},
+			"title": ""
+		},
+		"nav": "Device Types"
 	}
 }

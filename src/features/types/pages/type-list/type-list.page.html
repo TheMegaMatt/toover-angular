@@ -1,5 +1,5 @@
 <oa-page-header [title]="'types.list.title' | translate" />
 <oa-page-content>
-    <oa-section-header [title]="(subtitle()) | translate:{name: filter()}" [actions]="actions" />
+    <oa-section-header [title]="(subtitle()) | translate:{search: filter()}" [actions]="actions" />
     <oa-types-card-list [types]="types()" [loading]="loading()" [filter]="filter()" />
 </oa-page-content>

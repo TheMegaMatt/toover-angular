@@ -2,13 +2,15 @@ import {Component, input} from '@angular/core';
 import {DeviceType} from "@/features/types/models/entity";
 import {RouterLink} from "@angular/router";
 import {TranslateModule} from "@ngx-translate/core";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'oa-types-card-list',
   standalone: true,
   imports: [
     RouterLink,
-    TranslateModule
+    TranslateModule,
+    NgIf
   ],
   templateUrl: './types-card-list.component.html',
   styles: ``

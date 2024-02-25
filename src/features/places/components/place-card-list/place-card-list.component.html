@@ -6,16 +6,19 @@
                 <div class="flex-1 flex flex-grow items-center justify-between rounded-md truncate">
                     <div class="flex-1 px-4 py-2 text-sm truncate">
                         <p class="text-cyan-900 font-medium hover:text-gray-700">{{ item.name }}</p>
-                        <p class="text-gray-500 font-xs">{{ 'places.form.items-count.count' | translate: {count: item.itemsCount} }}</p>
+                        <p *ngIf="item.itemsCount > 0"
+                           class="text-gray-500 font-xs">{{ 'places.list.item.count' | translate: {count: item.itemsCount} }}</p>
+                        <p *ngIf="item.itemsCount == 0"
+                           class="text-gray-500 font-xs">{{ 'places.list.item.no-count' | translate }}</p>
                     </div>
                 </div>
             </li>
         } @empty {
             <h2 class="text-gray-500 text-xs font-medium uppercase tracking-wide">
-                @if(filter()) {
-                    {{'places.list.empty-filtered' | translate:{filter: filter()} }}
+                @if (filter()) {
+                    {{ 'places.list.empty.filtered' | translate:{search: filter()} }}
                 } @else {
-                    {{ 'places.list.empty' | translate }}
+                    {{ 'places.list.empty.no-filter' | translate }}
                 }
             </h2>
         }

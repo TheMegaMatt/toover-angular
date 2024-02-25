@@ -14,7 +14,7 @@ import {ActivatedRoute, RouterLink} from "@angular/router";
 import {PlaceCardListComponent} from "@/features/places/components/place-card-list/place-card-list.component";
 import {HeaderAction, SectionHeaderComponent} from "@shared/components/section-header.component";
 import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
-import {finalize, switchMap, tap} from "rxjs";
+import {debounceTime, finalize, switchMap, tap} from "rxjs";
 
 @Component({
     standalone: true,
@@ -28,16 +28,17 @@ export class PlaceListPage implements OnInit {
     places = signal<Place[]>([])
     loading = signal<boolean>(false);
     filter = signal<string>("");
-    subtitle = computed(() => this.filter()?.length > 0 ? 'places.list.subtitle' : 'places.list.all')
+    subtitle = computed(() => this.filter()?.length > 0 ? 'places.list.subtitle.filtered' : 'places.list.subtitle.not-filtered')
 
     actions: HeaderAction[] = [
-        {type: 'link', label: 'places.list.actions.create', route: ['create']}
+        {type: 'link', label: 'places.list.actions.create.label', route: ['create']}
     ]
 
     constructor() {
         this.route.queryParamMap.pipe(
             takeUntilDestroyed(),
             tap(() => this.loading.set(true)),
+            debounceTime(1500),
             switchMap(params => {
                 const name  = params.get("search") || "";
                 this.filter.set(name);
@@ -49,9 +50,7 @@ export class PlaceListPage implements OnInit {
                     this.places.set(value.items);
                     this.loading.set(false)
                 },
-                error: err => {
-                    this.loading.set(false)
-                }
+                error: () => this.loading.set(false)
             })
     }
 

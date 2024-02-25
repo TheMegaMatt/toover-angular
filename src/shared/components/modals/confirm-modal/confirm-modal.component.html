@@ -11,7 +11,7 @@
                             <h3 class="text-base font-semibold leading-6 text-gray-900"
                                 id="modal-title">{{ title() }}</h3>
                             <div class="mt-2 max-h-[50vh] w-full overflow-auto">
-                                <p class="text-sm text-gray-500">{{ body() }}</p>
+                                <p class="text-sm text-gray-500" [innerHTML]="body()"></p>
                             </div>
                         </div>
                     </div>

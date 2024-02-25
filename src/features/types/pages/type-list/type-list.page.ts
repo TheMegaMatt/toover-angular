@@ -3,11 +3,9 @@ import {PageContentComponent} from "@shared/layouts/app-layout/components/page-c
 import {PageHeaderComponent} from "@shared/layouts/app-layout/components/page-header/page-header.component";
 import {HeaderAction, SectionHeaderComponent} from "@shared/components/section-header.component";
 import {TranslateModule} from "@ngx-translate/core";
-import {PlacesApiService} from "@/features/places/services/places-api.service";
 import {ActivatedRoute} from "@angular/router";
-import {Place} from "@/features/places/models/entity";
 import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
-import {switchMap, tap} from "rxjs";
+import {debounceTime, switchMap, tap} from "rxjs";
 import {DeviceType} from "@/features/types/models/entity";
 import {TypesApiService} from "@/features/types/services/types-api.service";
 import {TypesCardListComponent} from "@/features/types/components";
@@ -31,16 +29,17 @@ export class TypeListPage implements OnInit {
     types = signal<DeviceType[]>([])
     loading = signal<boolean>(false);
     filter = signal<string>("");
-    subtitle = computed(() => this.filter()?.length > 0 ? 'types.list.subtitle' : 'types.list.all')
+    subtitle = computed(() => this.filter()?.length > 0 ? 'types.list.subtitle.filtered' : 'types.list.subtitle.not-filtered')
 
     actions: HeaderAction[] = [
-        {type: 'link', label: 'types.list.actions.create', route: ['create']}
+        {type: 'link', label: 'types.list.actions.create.label', route: ['create']}
     ]
 
     constructor() {
         this.route.queryParamMap.pipe(
             takeUntilDestroyed(),
             tap(() => this.loading.set(true)),
+            debounceTime(1500),
             switchMap(params => {
                 const name = params.get("search") || "";
                 this.filter.set(name);

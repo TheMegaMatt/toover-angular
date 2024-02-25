@@ -7,32 +7,28 @@
         <div class="mt-6">
             <dl class="divide-y divide-gray-100">
                 <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                    <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'types.form.name.label' | translate }}</dt>
+                    <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'types.detail.item.name' | translate }}</dt>
                     <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ type()?.name }}</dd>
                 </div>
                 <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                    <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'types.form.icon-url.label' | translate }}</dt>
+                    <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'types.detail.item.icon-url' | translate }}</dt>
                     <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
                         <img [src]="type()?.iconUrl" class="h-10 w-10"/>
                     </dd>
                 </div>
                 <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                    <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'types.form.items-count.label' | translate }}</dt>
-                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ 'types.form.items-count.count' | translate:{count: type()?.itemsCount} }}</dd>
-                </div>
-                <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                    <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'types.form.items.label' | translate }}</dt>
+                    <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'types.detail.item.items' | translate : {count: type()?.itemsCount} }}</dt>
                     <dd class="mt-2 text-sm text-gray-900 sm:col-span-3 sm:mt-0">
                         <oa-related-items-list [items]="items()" showType="false"
-                                               [createMessage]="'items.create.title' | translate"
-                                               [emptyMessage]="'items.list.empty' | translate"/>
+                                               [createMessage]="'places.detail.actions.empty.create.title' | translate "
+                                               [emptyMessage]="'places.detail.actions.empty.create.message' | translate:{name: type()?.name}"/>
                     </dd>
                 </div>
             </dl>
         </div>
     </div>
     <oa-confirm-modal [open]="open()" [title]="'types.detail.actions.delete.title' | translate"
-                      [body]="'types.detail.actions.delete.body' | translate"
+                      [body]="'types.detail.actions.delete.body' | translate:{name: type()?.name}"
                       [cancelLabel]="'types.detail.actions.delete.cancel' | translate"
                       [confirmLabel]="'types.detail.actions.delete.confirm' | translate"
                       (confirm)="onDeleteConfirm_Click()" (cancel)="onCancel()" />
