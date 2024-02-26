@@ -1,4 +1,109 @@
-<oa-page-header [title]="'items.detail.title' | translate" />
+<oa-page-header [title]="'items.detail.title' | translate"/>
 <oa-page-content>
-    <oa-section-header [title]="'items.detail.all' | translate" />
+    <oa-section-header [title]="'items.detail.subtitle' | translate:{name: item()?.name}" [actions]="actions"/>
+    <oa-error-display [error]="error()" *ngIf="error()" (dismiss)="error.set(null)"/>
+    <div>
+        <div class="mt-6 border-gray-100">
+            <dl class="divide-y divide-gray-100">
+                <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'items.form.name.label' | translate }}</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ item()?.name }}</dd>
+                </div>
+                <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'items.form.owner.label' | translate }}</dt>
+                    <dd *ngIf="item()?.owner"
+                        class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ item()?.owner?.firstName }} {{ item()?.owner?.lastName }}
+                    </dd>
+                    <dd *ngIf="!item()?.owner"
+                        class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ 'items.general.available' | translate }}
+                    </dd>
+                </div>
+                <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'items.form.place.label' | translate }}</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ item()?.place?.name }}</dd>
+                </div>
+                <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'items.form.type.label' | translate }}</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ item()?.type?.name }}</dd>
+                </div>
+                <div *ngIf="item()?.purchaseDate" class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'items.form.purchase-date.label' | translate }}</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ item()?.purchaseDate | date }}</dd>
+                </div>
+                <div *ngIf="item()?.note" class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'items.form.note.label' | translate }}</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0" [innerHTML]="note()"></dd>
+                </div>
+                <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'item.form.timeline.label' | translate }}</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+                        <ul role="list" class="-mb-8">
+                            @for (item of history(); track $index) {
+                                <li>
+                                    <div class="relative pb-8">
+										<span *ngIf="!$last"
+                                              class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                                              aria-hidden="true"></span>
+
+                                        <div class="relative flex space-x-3">
+                                            <div>
+												<span class="h-8 w-8 rounded-full bg-cyan-400 flex items-center justify-center ring-8 ring-white">
+												  <!-- Heroicon name: solid/user -->
+												  <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg"
+                                                       viewBox="0 0 20 20" fill="currentColor"
+                                                       aria-hidden="true">
+													<path fill-rule="evenodd"
+                                                          d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                                          clip-rule="evenodd"/>
+												  </svg>
+												</span>
+                                            </div>
+                                            <div class="min-w-0 flex-1 flex justify-between space-x-4">
+                                                <div>
+                                                    @switch (item.type) {
+                                                        @case ('created') {
+                                                            <div>
+                                                                <p class="font-bold text-cyan-700">Item Created</p>
+                                                                <p class="text-sm text-gray-500">
+                                                                    Location {{ item.place }}</p>
+                                                            </div>
+                                                        }
+                                                        @case ('moved') {
+                                                            <div>
+                                                                <p class="font-bold text-cyan-700">Item Moved</p>
+                                                                <p class="text-sm text-gray-500">
+                                                                    Location: {{ item.place }}</p>
+                                                            </div>
+                                                        }
+                                                        @case ('assigned') {
+                                                            <div>
+                                                                <p class="font-bold text-cyan-700">Item Assigned</p>
+                                                                <p class="text-sm text-gray-500">New
+                                                                    Owner: {{ item.owner }}</p>
+                                                            </div>
+                                                        }
+                                                        @case ('returned') {
+                                                            <p class="font-bold text-cyan-700">Item Returned</p>
+                                                        }
+                                                    }
+                                                </div>
+                                                <div class="text-right text-sm whitespace-nowrap text-gray-500">
+                                                    <time datetime="2020-09-20">{{ item.date | date }}</time>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                    </dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+    <oa-confirm-modal [open]="open()" [title]="'items.detail.actions.delete.title' | translate"
+                      [body]="'items.detail.actions.delete.body' | translate:{name:item()?.name}"
+                      [cancelLabel]="'items.detail.actions.delete.cancel' | translate"
+                      [confirmLabel]="'items.detail.actions.delete.confirm' | translate"
+                      (confirm)="onDeleteConfirm_Click()" (cancel)="onCancel()"/>
 </oa-page-content>

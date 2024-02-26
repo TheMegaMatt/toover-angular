@@ -14,6 +14,6 @@ export class AppComponent {
   private translateService = inject(TranslateService);
    
   constructor() {
-    this.translateService.use('it')
+    this.translateService.use('en')
   }
 }
