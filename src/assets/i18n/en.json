@@ -120,13 +120,99 @@
 				"max-length": "The field must have a maximum of {{requiredLength}} characters.",
 				"min-length": "The field must have at least {{requiredLength}} characters.",
 				"required": "The field is mandatory"
-			}
+			},
+			"na": "N/A"
 		}
 	},
 	"items": {
+		"create": {
+			"subtitle": "Create a new device in the system",
+			"title": "Create device"
+		},
+		"detail": {
+			"actions": {
+				"delete": {
+					"body": "Are you sure you want to delete device <i>{{name}}</i>?",
+					"cancel": "Cancel",
+					"confirm": "Delete",
+					"label": "Delete",
+					"title": "Delete device"
+				},
+				"edit": {
+					"label": "Edit"
+				}
+			},
+			"item": {
+				"icon-url": "Icon",
+				"items": "Devices of this type ({{count}})",
+				"name": "Device name"
+			},
+			"subtitle": "Detail for {{name}}",
+			"title": "Device Detail"
+		},
+		"edit": {
+			"subtitle": "Edit {{name}}",
+			"title": "Edit device"
+		},
+		"form": {
+			"actions": {
+				"cancel": {
+					"label": "Cancel"
+				},
+				"save": {
+					"label": "Save"
+				}
+			},
+			"name": {
+				"label": "Device name"
+			},
+			"note": {
+				"label": "Note"
+			},
+			"owner": {
+				"label": "Assigned to"
+			},
+			"place": {
+				"label": "Place"
+			},
+			"purchase-date": {
+				"label": "Purchase date"
+			},
+			"timeline": {
+				"label": "Device History"
+			},
+			"type": {
+				"label": "Device Type"
+			}
+		},
 		"general": {
 			"available": "Available"
-		}
+		},
+		"list": {
+			"actions": {
+				"create": {
+					"label": "Create device"
+				}
+			},
+			"empty": {
+				"filtered": "No device for \"{{search}}\"",
+				"no-filter": "No Devices"
+			},
+			"item": {
+				"available": "Available",
+				"count": "{{count}} devices",
+				"no-count": "No Devices",
+				"no-label": "Label not available",
+				"owner": "{{firstName}} {{lastName}} ({{place}})"
+			},
+			"loading": "Loading devices...",
+			"subtitle": {
+				"filtered": "Search device types for \"{{search}}\"...",
+				"not-filtered": "All devices"
+			},
+			"title": "Devices"
+		},
+		"nav": "Devices"
 	},
 	"places": {
 		"create": {

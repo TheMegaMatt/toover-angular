@@ -120,13 +120,99 @@
 				"max-length": "Il campo deve avere al massimo {{requiredLength}} caratteri.",
 				"min-length": "Il campo deve avere almeno {{requiredLength}} caratteri.",
 				"required": "Il campo è obbligatorio"
-			}
+			},
+			"na": "N.D."
 		}
 	},
 	"items": {
+		"create": {
+			"subtitle": "Crea un nuovo dispositivo nel sistema",
+			"title": "Crea dispositivo"
+		},
+		"detail": {
+			"actions": {
+				"delete": {
+					"body": "Sei sicuro di voler eliminare il device <i>{{name}}</i>?",
+					"cancel": "Annulla",
+					"confirm": "Elimina",
+					"label": "Elimina",
+					"title": "Elimina Dispositivo"
+				},
+				"edit": {
+					"label": "Modifica"
+				}
+			},
+			"item": {
+				"icon-url": "Icona",
+				"items": "Dispositivi di questa tipologia ({{count}})",
+				"name": "Nome Dispositivo"
+			},
+			"subtitle": "Dettaglio per {{name}}",
+			"title": "Dettaglio Dispositivo"
+		},
+		"edit": {
+			"subtitle": "Modifica per {{name}}",
+			"title": "Modifica Dispositivo"
+		},
+		"form": {
+			"actions": {
+				"cancel": {
+					"label": "Annulla"
+				},
+				"save": {
+					"label": "Salva"
+				}
+			},
+			"name": {
+				"label": "Nome dispositivo"
+			},
+			"note": {
+				"label": "Note"
+			},
+			"owner": {
+				"label": "Assegnato a"
+			},
+			"place": {
+				"label": "Luogo"
+			},
+			"purchase-date": {
+				"label": "Data di Acquisto"
+			},
+			"timeline": {
+				"label": "Storia dispositivo"
+			},
+			"type": {
+				"label": "Tipo dispositivo"
+			}
+		},
 		"general": {
 			"available": "Disponibile"
-		}
+		},
+		"list": {
+			"actions": {
+				"create": {
+					"label": "Crea dispositivo"
+				}
+			},
+			"empty": {
+				"filtered": "Nessun dispositivo per \"{{search}}\"",
+				"no-filter": "Nessun dispositivo"
+			},
+			"item": {
+				"available": "Disponibile",
+				"count": "{{count}} dispositivi",
+				"no-count": "Nessun dispositivo",
+				"no-label": "Etichetta non disponibile",
+				"owner": "{{firstName}} {{lastName}}  ({{place}})"
+			},
+			"loading": "Caricamento dispositivi in corso...",
+			"subtitle": {
+				"filtered": "Ricerca dispositivo per \"{{search}}\"...",
+				"not-filtered": "Tutte i dispositivi"
+			},
+			"title": "Dispositivi"
+		},
+		"nav": "Dispositivi"
 	},
 	"places": {
 		"create": {

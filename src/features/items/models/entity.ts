@@ -20,3 +20,29 @@ export interface ItemHistory {
     startDate: Date;
     endDate?: Date | null;
 }
+
+type CreatedTimeline = {
+    type: 'created';
+    place: string,
+    date: Date
+}
+
+type MovedTimeline = {
+    type: 'moved';
+    place: string,
+    date: Date
+}
+
+type AssignedTimeline = {
+    type: 'assigned'
+    owner: string
+    date: Date
+}
+
+type ReturnedTimeline = {
+    type: 'returned',
+    owner: string,
+    date: Date
+}
+
+export type ItemTimeline = CreatedTimeline | MovedTimeline | AssignedTimeline | ReturnedTimeline;
