@@ -30,7 +30,23 @@ export class AuthService {
 
     // selectors
     user = computed(() => this.state().user);
-    profileImage = computed(() => this.user()?.photoURL || DEFAULT_IMAGE);
+    displayName = computed(() => this.user()?.displayName ?? this.user()?.email ?? "N/A");
+    email = computed(() => this.user()?.email ?? "N/A");
+    profileImage = computed(() => {
+        if(this.user()?.photoURL) {
+            return this.user()?.photoURL;
+        }
+
+        if(this.user()?.displayName) {
+            return `https://ui-avatars.com/api/?name=${this.user()?.displayName?.split(" ").join("+")}`;
+        }
+
+        if(this.email()) {
+            return `https://ui-avatars.com/api/?name=${this.user()?.email?.split(".").join("+")}`;
+        }
+
+        return this.user()?.photoURL || DEFAULT_IMAGE;
+    });
     roles = computed(() => this.state().claims.roles);
     token = computed(() => this.state().token);
 

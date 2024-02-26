@@ -1,12 +1,8 @@
 import {ChangeDetectionStrategy, Component, computed, inject, type OnInit, signal} from '@angular/core';
 import {HeaderAction, SectionHeaderComponent} from "@shared/components/section-header.component";
-import {PageContentComponent} from "@shared/layouts/app-layout/components/page-content/page-content.component";
-import {PageHeaderComponent} from "@shared/layouts/app-layout/components/page-header/page-header.component";
+import {PageHeaderComponent, PageContentComponent} from "@shared/layouts";
 import {TranslateModule} from "@ngx-translate/core";
-import {PlaceCardListComponent} from "@/features/places/components/place-card-list/place-card-list.component";
-import {PlacesApiService} from "@/features/places/services/places-api.service";
 import {ActivatedRoute} from "@angular/router";
-import {Place} from "@/features/places/models/entity";
 import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
 import {switchMap, tap} from "rxjs";
 import {Employee} from "@/features/employees/models/entity";
@@ -34,10 +30,10 @@ export class EmployeeListPage implements OnInit {
     employees = signal<Employee[]>([])
     loading = signal<boolean>(false);
     filter = signal<string>("");
-    subtitle = computed(() => this.filter()?.length > 0 ? 'employees.list.subtitle' : 'employees.list.all')
+    subtitle = computed(() => this.filter()?.length > 0 ? 'employees.list.subtitle.filtered' : 'employees.list.subtitle.not-filtered')
 
     actions: HeaderAction[] = [
-        {type: 'link', label: 'employees.list.actions.create', route: ['create']}
+        {type: 'link', label: 'employees.list.actions.create.label', route: ['create']}
     ]
 
     constructor() {

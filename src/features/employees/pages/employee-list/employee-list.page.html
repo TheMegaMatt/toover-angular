@@ -1,6 +1,6 @@
 <oa-page-header [title]="'employees.list.title' | translate" />
 <oa-page-content>
-    <oa-section-header [title]="'employees.list.all' | translate" />
+    <oa-section-header [title]="subtitle() | translate:{search: filter()}" [actions]="actions" />
 
     <oa-employees-card-list [employees]="employees()" [loading]="loading()" [filter]="filter()"/>
 </oa-page-content>

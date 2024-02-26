@@ -27,6 +27,93 @@
 			"title": "Settings"
 		}
 	},
+	"employees": {
+		"create": {
+			"subtitle": "Create a new employee in the system",
+			"title": "Create employee"
+		},
+		"detail": {
+			"actions": {
+				"delete": {
+					"body": "Are you sure you want to delete employee <i>{{name}}</i>?",
+					"cancel": "Cancel",
+					"confirm": "Delete",
+					"label": "Delete",
+					"title": "Delete employee"
+				},
+				"edit": {
+					"label": "Edit"
+				},
+				"empty": {
+					"create": {
+						"message": "No devices for {{name}}",
+						"title": "Create device"
+					}
+				}
+			},
+			"item": {
+				"items": "Devices assigned to employee ({{count}})",
+				"name": "Employee Name"
+			},
+			"subtitle": "Detail for {{name}}",
+			"title": "Employee Detail"
+		},
+		"edit": {
+			"subtitle": "Edit {{name}}",
+			"title": "Change employee"
+		},
+		"form": {
+			"actions": {
+				"cancel": {
+					"label": "Cancel"
+				},
+				"save": {
+					"label": "Save"
+				}
+			},
+			"firstName": {
+				"label": "First Name"
+			},
+			"items": {
+				"label": "Devices assigned to employee ({{count}})"
+			},
+			"lastName": {
+				"label": "Last Name"
+			},
+			"name": {
+				"label": "Employee Name"
+			},
+			"role": {
+				"cancel": "Cancel",
+				"confirm": "Select",
+				"label": "Role",
+				"pick": "Select",
+				"title": "Select a role"
+			}
+		},
+		"list": {
+			"actions": {
+				"create": {
+					"label": "Create employee"
+				}
+			},
+			"empty": {
+				"filtered": "No employees for \"{{search}}\"",
+				"no-filter": "No employees"
+			},
+			"item": {
+				"count": "{{count}} devices",
+				"no-count": "No Devices"
+			},
+			"loading": "Loading employees...",
+			"subtitle": {
+				"filtered": "Search employees for \"{{search}}\"...",
+				"not-filtered": "All employees"
+			},
+			"title": "Employees"
+		},
+		"nav": "Employees"
+	},
 	"general": {
 		"form": {
 			"errors": {

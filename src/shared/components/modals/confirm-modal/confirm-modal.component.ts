@@ -24,5 +24,4 @@ export class ConfirmModalComponent {
     open = input(false);
     @Output() confirm = new EventEmitter();
     @Output() cancel = new EventEmitter();
-    protected readonly Array = Array;
 }
