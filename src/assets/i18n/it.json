@@ -27,6 +27,93 @@
 			"title": "Impostazoni"
 		}
 	},
+	"employees": {
+		"create": {
+			"subtitle": "Crea un nuovo dipendente nel sistema",
+			"title": "Crea Dipendente"
+		},
+		"detail": {
+			"actions": {
+				"delete": {
+					"body": "Sei sicuro di voler eliminare il dipendente <i>{{name}}</i>?",
+					"cancel": "Annulla",
+					"confirm": "Elimina",
+					"label": "Elimina",
+					"title": "Elimina dipendente"
+				},
+				"edit": {
+					"label": "Modifica"
+				},
+				"empty": {
+					"create": {
+						"message": "Nessun dispositivo per {{name}}",
+						"title": "Crea dispositivo"
+					}
+				}
+			},
+			"item": {
+				"items": "Dispositivi assegnati al dipendente ({{count}})",
+				"name": "Nome Dipendente"
+			},
+			"subtitle": "Dettaglio per {{name}}",
+			"title": "Dettaglio Dipendente"
+		},
+		"edit": {
+			"subtitle": "Modifica per {{name}}",
+			"title": "Modifica dipendente"
+		},
+		"form": {
+			"actions": {
+				"cancel": {
+					"label": "Annulla"
+				},
+				"save": {
+					"label": "Salva"
+				}
+			},
+			"firstName": {
+				"label": "Nome"
+			},
+			"items": {
+				"label": "Dispositivi assegnati al dipendente ({{count}})"
+			},
+			"lastName": {
+				"label": "Cognome"
+			},
+			"name": {
+				"label": "Nome dipendente"
+			},
+			"role": {
+				"cancel": "Annulla",
+				"confirm": "Seleziona",
+				"label": "Ruolo",
+				"pick": "Seleziona",
+				"title": "Seleziona un ruolo"
+			}
+		},
+		"list": {
+			"actions": {
+				"create": {
+					"label": "Crea dipendente"
+				}
+			},
+			"empty": {
+				"filtered": "Nessuna dipendente per \"{{search}}\"",
+				"no-filter": "Nessun dipendente"
+			},
+			"item": {
+				"count": "{{count}} dispositivi",
+				"no-count": "Nessun dispositivo"
+			},
+			"loading": "Caricamento dipendenti in corso...",
+			"subtitle": {
+				"filtered": "Ricerca dipendenti per \"{{search}}\"...",
+				"not-filtered": "Tutti i dipendenti"
+			},
+			"title": "Dipendenti"
+		},
+		"nav": "Dipendenti"
+	},
 	"general": {
 		"form": {
 			"errors": {

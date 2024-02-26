@@ -45,10 +45,10 @@ export class EmployeeDetailPage implements OnInit {
     error = signal<any>(null)
 
     actions: HeaderAction[] = [
-        {type: 'link', label: 'employees.details.actions.edit', route: ['edit']},
+        {type: 'link', label: 'employees.detail.actions.edit.label', route: ['edit']},
         {
             type: 'button',
-            label: 'employees.details.actions.delete',
+            label: 'employees.detail.actions.delete.label',
             action: () => this.onDelete_Click(),
             variant: 'danger'
         },
