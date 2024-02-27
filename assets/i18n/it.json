@@ -1,0 +1,371 @@
+{
+	"auth": {
+		"login": {
+			"forms": {
+				"actions": {
+					"sign-in": {
+						"label": "Accedi"
+					}
+				},
+				"email": {
+					"label": "Indirizzo Email"
+				},
+				"password": {
+					"label": "Password"
+				}
+			},
+			"title": "Accedi a Toover"
+		}
+	},
+	"dashboard": {
+		"about": {
+			"nav": "About\n",
+			"title": "About Toover"
+		},
+		"settings": {
+			"nav": "Impostazioni",
+			"title": "Impostazoni"
+		}
+	},
+	"employees": {
+		"create": {
+			"subtitle": "Crea un nuovo dipendente nel sistema",
+			"title": "Crea Dipendente"
+		},
+		"detail": {
+			"actions": {
+				"delete": {
+					"body": "Sei sicuro di voler eliminare il dipendente <i>{{name}}</i>?",
+					"cancel": "Annulla",
+					"confirm": "Elimina",
+					"label": "Elimina",
+					"title": "Elimina dipendente"
+				},
+				"edit": {
+					"label": "Modifica"
+				},
+				"empty": {
+					"create": {
+						"message": "Nessun dispositivo per {{name}}",
+						"title": "Crea dispositivo"
+					}
+				}
+			},
+			"item": {
+				"items": "Dispositivi assegnati al dipendente ({{count}})",
+				"name": "Nome Dipendente"
+			},
+			"subtitle": "Dettaglio per {{name}}",
+			"title": "Dettaglio Dipendente"
+		},
+		"edit": {
+			"subtitle": "Modifica per {{name}}",
+			"title": "Modifica dipendente"
+		},
+		"form": {
+			"actions": {
+				"cancel": {
+					"label": "Annulla"
+				},
+				"save": {
+					"label": "Salva"
+				}
+			},
+			"firstName": {
+				"label": "Nome"
+			},
+			"items": {
+				"label": "Dispositivi assegnati al dipendente ({{count}})"
+			},
+			"lastName": {
+				"label": "Cognome"
+			},
+			"name": {
+				"label": "Nome dipendente"
+			},
+			"role": {
+				"cancel": "Annulla",
+				"confirm": "Seleziona",
+				"label": "Ruolo",
+				"pick": "Seleziona",
+				"title": "Seleziona un ruolo"
+			}
+		},
+		"list": {
+			"actions": {
+				"create": {
+					"label": "Crea dipendente"
+				}
+			},
+			"empty": {
+				"filtered": "Nessuna dipendente per \"{{search}}\"",
+				"no-filter": "Nessun dipendente"
+			},
+			"item": {
+				"count": "{{count}} dispositivi",
+				"no-count": "Nessun dispositivo"
+			},
+			"loading": "Caricamento dipendenti in corso...",
+			"subtitle": {
+				"filtered": "Ricerca dipendenti per \"{{search}}\"...",
+				"not-filtered": "Tutti i dipendenti"
+			},
+			"title": "Dipendenti"
+		},
+		"nav": "Dipendenti"
+	},
+	"general": {
+		"form": {
+			"errors": {
+				"max-length": "Il campo deve avere al massimo {{requiredLength}} caratteri.",
+				"min-length": "Il campo deve avere almeno {{requiredLength}} caratteri.",
+				"required": "Il campo è obbligatorio",
+				"valid-url": "Il campo deve essere un Url valido"
+			},
+			"na": "N.D."
+		}
+	},
+	"items": {
+		"create": {
+			"subtitle": "Crea un nuovo dispositivo nel sistema",
+			"title": "Crea dispositivo"
+		},
+		"detail": {
+			"actions": {
+				"delete": {
+					"body": "Sei sicuro di voler eliminare il device <i>{{name}}</i>?",
+					"cancel": "Annulla",
+					"confirm": "Elimina",
+					"label": "Elimina",
+					"title": "Elimina Dispositivo"
+				},
+				"edit": {
+					"label": "Modifica"
+				}
+			},
+			"item": {
+				"icon-url": "Icona",
+				"items": "Dispositivi di questa tipologia ({{count}})",
+				"name": "Nome Dispositivo"
+			},
+			"subtitle": "Dettaglio per {{name}}",
+			"title": "Dettaglio Dispositivo"
+		},
+		"edit": {
+			"subtitle": "Modifica per {{name}}",
+			"title": "Modifica Dispositivo"
+		},
+		"form": {
+			"actions": {
+				"cancel": {
+					"label": "Annulla"
+				},
+				"save": {
+					"label": "Salva"
+				}
+			},
+			"label": {
+				"label": "Etichetta"
+			},
+			"name": {
+				"label": "Nome dispositivo"
+			},
+			"note": {
+				"label": "Note"
+			},
+			"owner": {
+				"label": "Assegnato a"
+			},
+			"place": {
+				"label": "Luogo"
+			},
+			"purchase-date": {
+				"label": "Data di Acquisto"
+			},
+			"timeline": {
+				"label": "Storia dispositivo"
+			},
+			"type": {
+				"label": "Tipo dispositivo"
+			}
+		},
+		"general": {
+			"available": "Disponibile"
+		},
+		"list": {
+			"actions": {
+				"create": {
+					"label": "Crea dispositivo"
+				}
+			},
+			"empty": {
+				"filtered": "Nessun dispositivo per \"{{search}}\"",
+				"no-filter": "Nessun dispositivo"
+			},
+			"item": {
+				"available": "Disponibile",
+				"count": "{{count}} dispositivi",
+				"no-count": "Nessun dispositivo",
+				"no-label": "Etichetta non disponibile",
+				"owner": "{{firstName}} {{lastName}}  ({{place}})"
+			},
+			"loading": "Caricamento dispositivi in corso...",
+			"subtitle": {
+				"filtered": "Ricerca dispositivo per \"{{search}}\"...",
+				"not-filtered": "Tutte i dispositivi"
+			},
+			"title": "Dispositivi"
+		},
+		"nav": "Dispositivi"
+	},
+	"places": {
+		"create": {
+			"subtitle": "Crea un nuovo luogo nel sistema",
+			"title": "Crea luogo"
+		},
+		"detail": {
+			"actions": {
+				"delete": {
+					"body": "Sei sicuro di voler eliminare il luogo <i>{{name}}</i>?",
+					"cancel": "Annulla",
+					"confirm": "Elimina",
+					"label": "Elimina",
+					"title": "Elimina luogo"
+				},
+				"edit": {
+					"label": "Modifica"
+				},
+				"empty": {
+					"create": {
+						"message": "Nessun dispositivo per {{name}}",
+						"title": "Crea nuovo dipositivo"
+					}
+				}
+			},
+			"item": {
+				"items": "Dispositivi in questo luogo ({{count}})",
+				"name": "Nome Luogo"
+			},
+			"subtitle": "Dettaglio per {{name}}",
+			"title": "Dettaglio Luogo"
+		},
+		"edit": {
+			"subtitle": "Modifica per {{name}}",
+			"title": "Modifica tipo"
+		},
+		"form": {
+			"actions": {
+				"cancel": {
+					"label": "Annulla"
+				},
+				"save": {
+					"label": "Salva"
+				}
+			},
+			"name": {
+				"cancel": "Annulla",
+				"confirm": "Seleziona",
+				"label": "Nome tipo",
+				"na": "Non selezionato",
+				"pick": "...",
+				"title": "Seleziona un luogo"
+			}
+		},
+		"list": {
+			"actions": {
+				"create": {
+					"label": "Crea luogo"
+				}
+			},
+			"empty": {
+				"filtered": "Nessuna luogo per \"{{search}}\"",
+				"no-filter": "Nessun dispositivo"
+			},
+			"item": {
+				"count": "{{count}} dispositivi",
+				"no-count": "Nessun dispositivo"
+			},
+			"loading": "Caricamento luoghi in corso...",
+			"subtitle": {
+				"filtered": "Ricerca luoghi per \"{{search}}\"...",
+				"not-filtered": "Tutti i luoghi"
+			},
+			"title": "Luoghi"
+		},
+		"nav": "Luoghi"
+	},
+	"types": {
+		"create": {
+			"subtitle": "Crea una nuova tipologia di dispositivo nel sistema",
+			"title": "Crea tipologia dispositivo"
+		},
+		"detail": {
+			"actions": {
+				"delete": {
+					"body": "Sei sicuro di voler eliminare il tipo <i>{{name}}</i>?",
+					"cancel": "Annulla",
+					"confirm": "Elimina",
+					"label": "Elimina",
+					"title": "Elimina Tipo"
+				},
+				"edit": {
+					"label": "Modifica"
+				}
+			},
+			"item": {
+				"icon-url": "Icona",
+				"items": "Dispositivi di questa tipologia ({{count}})",
+				"name": "Nome tipo"
+			},
+			"subtitle": "Dettaglio per {{name}}",
+			"title": "Dettaglio Tipo"
+		},
+		"edit": {
+			"subtitle": "Modifica per {{name}}",
+			"title": "Modifica tipo"
+		},
+		"form": {
+			"actions": {
+				"cancel": {
+					"label": "Annulla"
+				},
+				"save": {
+					"label": "Salva"
+				}
+			},
+			"icon-url": {
+				"label": "Icona"
+			},
+			"name": {
+				"cancel": "Annulla",
+				"confirm": "Seleziona",
+				"label": "Nome tipo",
+				"na": "Non selezionato",
+				"pick": "...",
+				"title": "Seleziona tipo dispositivo"
+			}
+		},
+		"list": {
+			"actions": {
+				"create": {
+					"label": "Crea dispositivo"
+				}
+			},
+			"empty": {
+				"filtered": "Nessuna tipologia dispositivo per \"{{search}}\"",
+				"no-filter": "Nessun dispositivo"
+			},
+			"item": {
+				"count": "{{count}} dispositivi",
+				"no-count": "Nessun dispositivo"
+			},
+			"loading": "Caricamento tipologie dispositivi in corso...",
+			"subtitle": {
+				"filtered": "Ricerca tipologie dispositivo per \"{{search}}\"...",
+				"not-filtered": "Tutte le tipologie dispositivo"
+			},
+			"title": "Tipologie Dispositivo"
+		},
+		"nav": "Tipologie Dispositivo"
+	}
+}

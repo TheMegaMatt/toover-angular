@@ -1,0 +1,1 @@
+import{a as o}from"./chunk-JEV6CQYR.js";import{fa as e}from"./chunk-3BEEKYPC.js";var s=(()=>{let t=class t extends o{constructor(){super("api/employee")}};t.\u0275fac=function(i){return new(i||t)},t.\u0275prov=e({token:t,factory:t.\u0275fac,providedIn:"root"});let r=t;return r})();export{s as a};
