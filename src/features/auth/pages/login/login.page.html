@@ -1,5 +1,0 @@
-<oa-auth-title [title]="'auth.login.title' | translate "/>
-<oa-auth-content>
-    <oa-error-display *ngIf="error()" [error]="error()" (dismiss)="error.set(null)" />
-    <oa-login-form (login)="login($event)" />
-</oa-auth-content>

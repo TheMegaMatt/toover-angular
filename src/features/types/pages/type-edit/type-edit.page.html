@@ -1,6 +1,0 @@
-<oa-page-header [title]="'types.edit.title' | translate" />
-<oa-page-content>
-    <oa-section-header [title]="'types.edit.subtitle' | translate: {name: name() }" />
-    <oa-error-display [error]="error()" *ngIf="error()" (dismiss)="error.set(null)" />
-    <oa-type-form [form]="form" (submitted)="onSubmit()" (cancel)="onCancel()" />
-</oa-page-content>

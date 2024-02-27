@@ -1,6 +1,0 @@
-<oa-page-header [title]="'items.create.title' | translate" />
-<oa-page-content>
-    <oa-section-header [title]="'items.create.subtitle' | translate" />
-    <oa-error-display [error]="error()" *ngIf="error()" />
-    <oa-item-form [form]="form" (submitted)="onSubmit()" (cancel)="onCancel()"  />
-</oa-page-content>
