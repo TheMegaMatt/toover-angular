@@ -10,6 +10,10 @@
                     <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ item()?.name }}</dd>
                 </div>
                 <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'items.form.label.label' | translate }}</dt>
+                    <dd class="mt-1 text-sm leading-6 font-mono text-gray-700 sm:col-span-2 sm:mt-0">{{ item()?.label }}</dd>
+                </div>
+                <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
                     <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'items.form.owner.label' | translate }}</dt>
                     <dd *ngIf="item()?.owner"
                         class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ item()?.owner?.firstName }} {{ item()?.owner?.lastName }}
@@ -35,7 +39,7 @@
                     <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0" [innerHTML]="note()"></dd>
                 </div>
                 <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                    <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'item.form.timeline.label' | translate }}</dt>
+                    <dt class="text-sm font-medium leading-6 text-gray-900">{{ 'items.form.timeline.label' | translate }}</dt>
                     <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
                         <ul role="list" class="-mb-8">
                             @for (item of history(); track $index) {

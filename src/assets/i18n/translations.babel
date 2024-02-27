@@ -923,6 +923,21 @@
 													</translation>
 												</translations>
 											</concept_node>
+											<concept_node>
+												<name>valid-url</name>
+												<description/>
+												<comment/>
+												<translations>
+													<translation>
+														<language>en-US</language>
+														<approved>false</approved>
+													</translation>
+													<translation>
+														<language>it-IT</language>
+														<approved>false</approved>
+													</translation>
+												</translations>
+											</concept_node>
 										</children>
 									</folder_node>
 									<concept_node>
@@ -1253,6 +1268,26 @@
 													</concept_node>
 												</children>
 											</folder_node>
+										</children>
+									</folder_node>
+									<folder_node>
+										<name>label</name>
+										<children>
+											<concept_node>
+												<name>label</name>
+												<description/>
+												<comment/>
+												<translations>
+													<translation>
+														<language>en-US</language>
+														<approved>false</approved>
+													</translation>
+													<translation>
+														<language>it-IT</language>
+														<approved>false</approved>
+													</translation>
+												</translations>
+											</concept_node>
 										</children>
 									</folder_node>
 									<folder_node>
@@ -1984,7 +2019,82 @@
 										<name>name</name>
 										<children>
 											<concept_node>
+												<name>cancel</name>
+												<description/>
+												<comment/>
+												<translations>
+													<translation>
+														<language>en-US</language>
+														<approved>false</approved>
+													</translation>
+													<translation>
+														<language>it-IT</language>
+														<approved>false</approved>
+													</translation>
+												</translations>
+											</concept_node>
+											<concept_node>
+												<name>confirm</name>
+												<description/>
+												<comment/>
+												<translations>
+													<translation>
+														<language>en-US</language>
+														<approved>false</approved>
+													</translation>
+													<translation>
+														<language>it-IT</language>
+														<approved>false</approved>
+													</translation>
+												</translations>
+											</concept_node>
+											<concept_node>
 												<name>label</name>
+												<description/>
+												<comment/>
+												<translations>
+													<translation>
+														<language>en-US</language>
+														<approved>false</approved>
+													</translation>
+													<translation>
+														<language>it-IT</language>
+														<approved>false</approved>
+													</translation>
+												</translations>
+											</concept_node>
+											<concept_node>
+												<name>na</name>
+												<description/>
+												<comment/>
+												<translations>
+													<translation>
+														<language>en-US</language>
+														<approved>false</approved>
+													</translation>
+													<translation>
+														<language>it-IT</language>
+														<approved>false</approved>
+													</translation>
+												</translations>
+											</concept_node>
+											<concept_node>
+												<name>pick</name>
+												<description/>
+												<comment/>
+												<translations>
+													<translation>
+														<language>en-US</language>
+														<approved>false</approved>
+													</translation>
+													<translation>
+														<language>it-IT</language>
+														<approved>false</approved>
+													</translation>
+												</translations>
+											</concept_node>
+											<concept_node>
+												<name>title</name>
 												<description/>
 												<comment/>
 												<translations>
@@ -2519,7 +2629,82 @@
 										<name>name</name>
 										<children>
 											<concept_node>
+												<name>cancel</name>
+												<description/>
+												<comment/>
+												<translations>
+													<translation>
+														<language>en-US</language>
+														<approved>false</approved>
+													</translation>
+													<translation>
+														<language>it-IT</language>
+														<approved>false</approved>
+													</translation>
+												</translations>
+											</concept_node>
+											<concept_node>
+												<name>confirm</name>
+												<description/>
+												<comment/>
+												<translations>
+													<translation>
+														<language>en-US</language>
+														<approved>false</approved>
+													</translation>
+													<translation>
+														<language>it-IT</language>
+														<approved>false</approved>
+													</translation>
+												</translations>
+											</concept_node>
+											<concept_node>
 												<name>label</name>
+												<description/>
+												<comment/>
+												<translations>
+													<translation>
+														<language>en-US</language>
+														<approved>false</approved>
+													</translation>
+													<translation>
+														<language>it-IT</language>
+														<approved>false</approved>
+													</translation>
+												</translations>
+											</concept_node>
+											<concept_node>
+												<name>na</name>
+												<description/>
+												<comment/>
+												<translations>
+													<translation>
+														<language>en-US</language>
+														<approved>false</approved>
+													</translation>
+													<translation>
+														<language>it-IT</language>
+														<approved>false</approved>
+													</translation>
+												</translations>
+											</concept_node>
+											<concept_node>
+												<name>pick</name>
+												<description/>
+												<comment/>
+												<translations>
+													<translation>
+														<language>en-US</language>
+														<approved>false</approved>
+													</translation>
+													<translation>
+														<language>it-IT</language>
+														<approved>false</approved>
+													</translation>
+												</translations>
+											</concept_node>
+											<concept_node>
+												<name>title</name>
 												<description/>
 												<comment/>
 												<translations>

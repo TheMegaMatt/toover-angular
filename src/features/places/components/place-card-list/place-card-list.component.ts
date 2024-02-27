@@ -1,4 +1,4 @@
-import {Component, input} from '@angular/core';
+import {Component, EventEmitter, input, Output} from '@angular/core';
 import {RouterLink} from "@angular/router";
 import {Place} from "@/features/places/models/entity";
 import {TranslateModule} from "@ngx-translate/core";
@@ -18,4 +18,5 @@ export class PlaceCardListComponent {
   places = input.required<Place[]>()
   loading = input.required<boolean>();
   filter = input.required<string>();
+  @Output() select = new EventEmitter<Place>();
 }

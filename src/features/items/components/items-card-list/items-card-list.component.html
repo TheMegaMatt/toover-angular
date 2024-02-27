@@ -9,8 +9,8 @@
                         <p class="text-cyan-900 font-medium hover:text-cyan-700">{{ item.name }}</p>
                         <p *ngIf="item.owner" class="text-gray-500 text-xs">{{ 'items.list.item.owner' | translate: {place: item.place.name, firstName: item.owner.firstName, lastName: item.owner.lastName} }}</p>
                         <p *ngIf="!item.owner" class="text-gray-500 text-xs">{{ 'items.list.item.available' | translate: {place: item.place.name} }}</p>
-                        <p *ngIf="!item.label" class="text-gray-300 text-xs">{{ 'items.list.item.no-label' | translate: {count: item} }}</p>
-                        <p *ngIf="item.label" class="text-gray-300 text-xs uppercase">{{item.label}}</p>
+                        <p *ngIf="!item.label" class="text-gray-300 text-xs font-mono uppercase">{{ 'items.list.item.no-label' | translate: {count: item} }}</p>
+                        <p *ngIf="item.label" class="text-gray-300 text-xs font-mono uppercase">{{item.label}}</p>
                     </div>
                 </div>
             </li>

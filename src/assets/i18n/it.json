@@ -119,7 +119,8 @@
 			"errors": {
 				"max-length": "Il campo deve avere al massimo {{requiredLength}} caratteri.",
 				"min-length": "Il campo deve avere almeno {{requiredLength}} caratteri.",
-				"required": "Il campo è obbligatorio"
+				"required": "Il campo è obbligatorio",
+				"valid-url": "Il campo deve essere un Url valido"
 			},
 			"na": "N.D."
 		}
@@ -162,6 +163,9 @@
 				"save": {
 					"label": "Salva"
 				}
+			},
+			"label": {
+				"label": "Etichetta"
 			},
 			"name": {
 				"label": "Nome dispositivo"
@@ -259,7 +263,12 @@
 				}
 			},
 			"name": {
-				"label": "Nome tipo"
+				"cancel": "Annulla",
+				"confirm": "Seleziona",
+				"label": "Nome tipo",
+				"na": "Non selezionato",
+				"pick": "...",
+				"title": "Seleziona un luogo"
 			}
 		},
 		"list": {
@@ -328,7 +337,12 @@
 				"label": "Icona"
 			},
 			"name": {
-				"label": "Nome tipo"
+				"cancel": "Annulla",
+				"confirm": "Seleziona",
+				"label": "Nome tipo",
+				"na": "Non selezionato",
+				"pick": "...",
+				"title": "Seleziona tipo dispositivo"
 			}
 		},
 		"list": {
