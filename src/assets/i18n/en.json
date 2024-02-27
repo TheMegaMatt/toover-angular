@@ -119,7 +119,8 @@
 			"errors": {
 				"max-length": "The field must have a maximum of {{requiredLength}} characters.",
 				"min-length": "The field must have at least {{requiredLength}} characters.",
-				"required": "The field is mandatory"
+				"required": "The field is mandatory",
+				"valid-url": "The field must be a valid URL"
 			},
 			"na": "N/A"
 		}
@@ -162,6 +163,9 @@
 				"save": {
 					"label": "Save"
 				}
+			},
+			"label": {
+				"label": "Label"
 			},
 			"name": {
 				"label": "Device name"
@@ -259,7 +263,12 @@
 				}
 			},
 			"name": {
-				"label": "Type Name"
+				"cancel": "Cancel",
+				"confirm": "Select",
+				"label": "Type Name",
+				"na": "Not selected",
+				"pick": "...",
+				"title": "Select a location"
 			}
 		},
 		"list": {
@@ -305,7 +314,7 @@
 			},
 			"item": {
 				"icon-url": "Icon",
-				"items": "",
+				"items": "Devices of this type ({{count}})",
 				"name": "Type Name"
 			},
 			"subtitle": "Detail for {{name}}",
@@ -328,7 +337,12 @@
 				"label": "Icon"
 			},
 			"name": {
-				"label": "Type Name"
+				"cancel": "Cancel",
+				"confirm": "Select",
+				"label": "Type Name",
+				"na": "Not selected",
+				"pick": "...",
+				"title": "Select device type"
 			}
 		},
 		"list": {
@@ -350,7 +364,7 @@
 				"filtered": "Search device types for \"{{search}}\"...",
 				"not-filtered": "All Device Types"
 			},
-			"title": ""
+			"title": "Device Types"
 		},
 		"nav": "Device Types"
 	}
