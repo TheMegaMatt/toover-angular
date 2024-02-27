@@ -105,6 +105,9 @@
           "options": {
             "buildTarget": "toover:build"
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
